@@ -32,11 +32,11 @@ void loop() {
     sleep_ms(1000);
     
   }*/
-  if(analogRead(R_IN) > 1000 && r != 255){r++;}
+  if(analogRead(R_IN) > 500 && r != 255){r++;}
   else if(r != 0){r--;}
-  if(analogRead(G_IN) > 1000 && g != 255){g++;}
+  if(analogRead(G_IN) > 500 && g != 255){g++;}
   else if(g != 0){g--;}
-  if(analogRead(B_IN) > 1000 && b != 255){b++;}
+  if(analogRead(B_IN) > 500 && b != 255){b++;}
   else if(b != 0){b--;}
 
   /*if(digitalRead(R_IN) && r != 255){r=255;}
@@ -60,5 +60,5 @@ void loop() {
   Serial.println(analogRead(B_IN));
 
   Serial.println("");
-  delay(500);
+  delay(10);
 }
